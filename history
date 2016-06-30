@@ -1,1 +1,14 @@
 
+Git:
+-----------------------------------------------------------------
+1. ssh -i /home/<user>/.ssh/github   -T -p 443 git@ssh.github.com
+ Alternative:
+ ------------
+ #vi config
+  add brlow content 
+  
+host github.com
+ HostName ssh.github.com
+ IdentityFile /home/<user>/.ssh/github
+ User git
+ port 443
