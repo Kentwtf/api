@@ -12,3 +12,11 @@ host github.com
  IdentityFile /home/<user>/.ssh/github
  User git
  port 443
+ 
+ 
+ -------ENBLE BUILD to run using curl------------------------
+ Get Crumb value using following curl command
+ Step 1: curl 'http://<host>:8080/crumbIssuer/api/xml?xpath=concat(//crumbRequestField,":",//crumb)'
+ Step 2: Open jenkins job , In "Build Triggers" enable "Trigger builds remotely (e.g., from scripts)" and 
+             enter token <url>:8080/me/configure
+ Step 3: curl -v -H "Jenkins-Crumb:XXXXXXXXXXXXXXXX" -X POST http://<host>:8080/job/Test3/buildWithParameters -d token=<token> --data-urlencode json='{"parameter": [{"TARGET_BUILD_NUMBER":"121","TARGET_JOB_NAME":"12"}]}'
