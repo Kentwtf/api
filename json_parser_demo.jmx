@@ -46,10 +46,10 @@
           <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
         </HTTPSamplerProxy>
         <hashTree>
-          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Path PostProcessor" enabled="false">
-            <stringProp name="JSONPostProcessor.referenceNames">madhu</stringProp>
-            <stringProp name="JSONPostProcessor.jsonPathExprs"></stringProp>
-            <stringProp name="JSONPostProcessor.match_numbers"></stringProp>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Path PostProcessor" enabled="true">
+            <stringProp name="JSONPostProcessor.referenceNames">transactionId_json</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.transactionId</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
           </JSONPostProcessor>
           <hashTree/>
           <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regular Expression Extractor" enabled="true">
